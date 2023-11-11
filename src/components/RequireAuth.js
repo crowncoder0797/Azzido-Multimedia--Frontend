@@ -9,7 +9,7 @@ const RequireAuth = () => {
     ?.map((path) => path?.path)
     ?.includes(location.pathname) ? (
     <Outlet />
-  ) : auth?.userInfo ? location.pathname.includes('edit-image') ? <Outlet /> : (
+  ) : auth?.userInfo ? location.pathname.includes('edit-image') || location.pathname.includes('templates') ? <Outlet /> : (
     <Navigate to='/' state={{ from: location }} replace />
   ) : (
     <Navigate

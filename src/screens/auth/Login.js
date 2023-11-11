@@ -93,7 +93,8 @@ const Login = () => {
                 register,
                 errors,
                 label: 'Remember me',
-                name: 'remember_me'
+                name: 'remember_me',
+                isRequired: false,
               })}
             </div>
             <div className='col d-flex justify-content-end'>

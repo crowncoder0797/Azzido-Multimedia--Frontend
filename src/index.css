@@ -40,3 +40,11 @@ textarea {
   justify-content: center;
   align-items: center;
 }
+
+.template-container > img {
+  display: block;
+  width: 30%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}

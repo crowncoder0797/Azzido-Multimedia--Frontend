@@ -67,6 +67,11 @@ const Navigation = () => {
       <>
         <ul className='navbar-nav ms-auto'>
           <li className='nav-item'>
+            <Link to='/templates' className='nav-link' aria-current='page'>
+              Templates
+            </Link>
+          </li>
+          <li className='nav-item'>
             <Link to='/edit-image' className='nav-link' aria-current='page'>
               Edit Image
             </Link>

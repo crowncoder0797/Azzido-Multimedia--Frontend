@@ -1,27 +1,28 @@
 import axios from 'axios'
 import { config } from '../utils/customLocalStorage'
+import { apiUrl } from '../constants'
 
 const dynamicAPI = async (method, url, obj = {}) => {
   try {
     switch (method) {
       case 'get':
         return await axios
-          .get(`http://localhost:5000${url}`, config())
+          .get(`${apiUrl}${url}`, config())
           .then((res) => res.data)
 
       case 'post':
         return await axios
-          .post(`http://localhost:5000${url}`, obj, config())
+          .post(`${apiUrl}${url}`, obj, config())
           .then((res) => res.data)
 
       case 'put':
         return await axios
-          .put(`http://localhost:5000${url}`, obj, config())
+          .put(`${apiUrl}${url}`, obj, config())
           .then((res) => res.data)
 
       case 'delete':
         return await axios
-          .delete(`http://localhost:5000${url}`, config())
+          .delete(`${apiUrl}${url}`, config())
           .then((res) => res.data)
     }
   } catch (error) {
