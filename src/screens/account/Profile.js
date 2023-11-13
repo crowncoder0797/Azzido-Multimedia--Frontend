@@ -117,7 +117,7 @@ const Profile = () => {
         {data && data.image && (
           <div className='d-flex justify-content-center'>
             <img
-              src={data && `${apiUrl}/api${data.image}`}
+              src={data && `${data.image.startsWith('http') ? '' : `${apiUrl}/api`}${data.image}`}
               alt='avatar'
               className='rounded-circle'
               width='200'
