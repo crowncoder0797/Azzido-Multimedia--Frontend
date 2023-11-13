@@ -12,6 +12,7 @@ import {
   inputTextArea,
 } from '../../utils/dynamicForm'
 import { Spinner } from '../../components'
+import { apiUrl } from '../../constants'
 
 const Profile = () => {
   const [file, setFile] = useState(null)
@@ -116,7 +117,7 @@ const Profile = () => {
         {data && data.image && (
           <div className='d-flex justify-content-center'>
             <img
-              src={data && data.image}
+              src={data && `${apiUrl}/api${data.image}`}
               alt='avatar'
               className='rounded-circle'
               width='200'
