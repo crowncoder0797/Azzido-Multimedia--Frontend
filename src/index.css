@@ -53,6 +53,10 @@ textarea {
   .template-container > img {
     width: 100%;
   }
+
+  .tui-image-editor-help-menu {
+    background-color: #151515 !important;
+  }
 }
 
 .tui-image-editor-container .tui-image-editor-header {

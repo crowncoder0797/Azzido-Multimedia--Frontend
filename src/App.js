@@ -1,9 +1,9 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import RequireAuth from './components/RequireAuth'
 import ProductImageEditor from './components/ProductImageEditor'
 import Templates from './components/Templates'
 import ForgotPassword from './screens/auth/ForgotPassword'
-import Home from './screens/auth/Home'
+// import Home from './screens/auth/Home'
 import Login from './screens/auth/Login'
 import Register from './screens/auth/Register'
 import NotFound from './screens/auth/NotFound'
@@ -31,7 +31,7 @@ const App = () => {
           />
 
           <Route element={<RequireAuth />}>
-            <Route path='/' element={<Home />} />
+            <Route path='/' element={<Navigate replace to='/edit-image' />} />
             <Route path='/templates' element={<Templates />} />
             <Route path='/edit-image' element={<ProductImageEditor />} />
             <Route path='/account/profile' element={<Profile />} />
